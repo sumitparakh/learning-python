@@ -1,6 +1,8 @@
 
 
-# LearningPython
+# Learning Python
+
+A repository to practice python and share the knowledge
 
 This project was generated using [Nx](https://nx.dev).
 
