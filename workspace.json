@@ -1,6 +1,43 @@
 {
   "version": 2,
-  "projects": {},
+  "projects": {
+    "api": {
+      "projectType": "application",
+      "root": "apps/api",
+      "sourceRoot": "apps/api/src",
+      "targets": {
+        "build": {
+          "executor": "@nx-python/nx-python:build",
+          "options": {
+            "outputPath": "dist\\apps\\api",
+            "main": "apps\\api\\manage.py",
+            "templateType": "django"
+          }
+        },
+        "serve": {
+          "executor": "@nx-python/nx-python:serve",
+          "options": {
+            "main": "apps\\api\\manage.py",
+            "templateType": "django"
+          }
+        },
+        "test": {
+          "executor": "@nx-python/nx-python:test",
+          "options": {
+            "main": "apps\\api\\src\\test_hello.py",
+            "templateType": "django"
+          }
+        },
+        "lint": {
+          "executor": "@nx-python/nx-python:lint",
+          "options": {
+            "main": "apps\\api\\manage.py",
+            "templateType": "django"
+          }
+        }
+      }
+    }
+  },
   "cli": {
     "defaultCollection": "@nrwl/workspace"
   }
